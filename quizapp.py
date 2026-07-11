@@ -1,16 +1,52 @@
 from tkinter import *
 
-window = Tk()
+home = Tk()
 
-window.geometry('720x480')
-window.title("Quiz App.")
-window.config(background="#E99FBF")
+home.geometry('720x480')
+home.title("Quiz App.")
+home.config(background="#E99FBF")
 
-quiztitle = Label(window, text= "Quiz app",
+
+quiztitle = Label(home, text= "Quiz app",
                   font = ("Georgia",25,'italic'),
-                  padx=5,pady=5
+                  padx=5,pady=5,
+                  bg="#E99FBF",
                   )
 quiztitle.pack(anchor='center')
 
 
-window.mainloop()
+welcome = Label(home, text= 'Welcome to quiz app.\n Select the topics you want to take a quiz on.',
+                font = ("Arial", 20),bg="#E874A6",
+                )
+welcome.pack(anchor='center')
+
+
+x = IntVar()
+y = IntVar()
+z = IntVar()
+a = IntVar()
+
+science = Checkbutton(home, text = 'Science',font = ('Georgia',15),
+                      bg="#E99FBF",activebackground="#E99FBF",
+                      variable = x,onvalue=1,offvalue=0)
+science.place(x=100,y=130)
+
+math = Checkbutton(home, text= 'Maths', font = ('Georgia',15),
+                   bg="#E99FBF",activebackground="#E99FBF",
+                   variable = y,onvalue=1,offvalue=0)
+math.place(x=100,y=160)
+
+gk = Checkbutton(home, text= 'General Knowledge', font = ('Georgia',15),
+                   bg="#E99FBF",activebackground="#E99FBF",
+                   variable = z,onvalue=1,offvalue=0)
+gk.place(x=100,y=190)
+
+all = Checkbutton(home, text = "All", font = ('Georgia',15),
+                   bg="#E99FBF",activebackground="#E99FBF",
+                   variable = a,onvalue=1,offvalue=0)
+all.place(x=100,y=220)
+
+
+
+
+home.mainloop()
