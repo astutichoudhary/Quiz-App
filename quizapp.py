@@ -6,16 +6,10 @@ home.geometry('720x480')
 home.title("Quiz App.")
 home.config(background="#E99FBF")
 
-# pinkflower = PhotoImage(file='gulabiphool.png', 
-#                         height=20, width=20
-#                         )
-
 quiztitle = Label(home, text= "Quiz app",
                   font = ("Georgia",25,'italic'),
                   padx=5,pady=5,
                   bg="#E99FBF",
-                #   image=pinkflower ,
-                #   compound = 'left',
                   )
 quiztitle.pack(anchor='center')
 
@@ -61,9 +55,28 @@ all = Checkbutton(home, text = "All", font = ('Georgia',15),
 
 all.place(x=100,y=220)
 
+# def proceed():
+#     questions()
+
+startquiz = Button(home, text = "Start quiz.",font = ('Georgia',20),)
+startquiz.pack()
+
 home.mainloop()
 
+
+
 questions = Tk()
-questions.config(background="#E99FBF", geometry = '720x480', title = 'Quiz started!')
+
+questions.geometry('720x480')
+questions.config(background="#E99FBF")
+questions.title('Quiz started!')
+
+
+for key,value in questiondict.items():
+    questionlabel = Label(questions,text = key,
+                          font= ('Georgia',15),
+                          bg="#E874A6",
+                          )
+
 
 questions.mainloop()
