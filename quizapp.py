@@ -6,11 +6,16 @@ home.geometry('720x480')
 home.title("Quiz App.")
 home.config(background="#E99FBF")
 
+# pinkflower = PhotoImage(file='gulabiphool.png', 
+#                         height=20, width=20
+#                         )
 
 quiztitle = Label(home, text= "Quiz app",
                   font = ("Georgia",25,'italic'),
                   padx=5,pady=5,
                   bg="#E99FBF",
+                #   image=pinkflower ,
+                #   compound = 'left',
                   )
 quiztitle.pack(anchor='center')
 
@@ -20,6 +25,10 @@ welcome = Label(home, text= 'Welcome to quiz app.\n Select the topics you want t
                 )
 welcome.pack(anchor='center')
 
+questiondict = {}
+
+math = {"What is the sum of the angles inside a triangle?" : ['A) 90°','B) 180°','C) 270°','D) 360°'],
+"answer": "B) 180°"}
 
 x = IntVar()
 y = IntVar()
@@ -41,12 +50,20 @@ gk = Checkbutton(home, text= 'General Knowledge', font = ('Georgia',15),
                    variable = z,onvalue=1,offvalue=0)
 gk.place(x=100,y=190)
 
+def toggle():
+    math.toggle()
+    science.toggle()
+    gk.toggle()
+
 all = Checkbutton(home, text = "All", font = ('Georgia',15),
                    bg="#E99FBF",activebackground="#E99FBF",
-                   variable = a,onvalue=1,offvalue=0)
+                   variable = a,onvalue=1,offvalue=0, command = toggle)
+
 all.place(x=100,y=220)
 
-
-
-
 home.mainloop()
+
+questions = Tk()
+questions.config(background="#E99FBF", geometry = '720x480', title = 'Quiz started!')
+
+questions.mainloop()

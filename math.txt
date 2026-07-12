@@ -1,0 +1,39 @@
+What is the sum of the angles inside a triangle?
+A) 90°B) 180°C) 270°D) 360°
+Answer: B) 180°
+
+What is 15 * 4 - 10?
+A) 40B) 50C) 60 D)70
+Answer: A) 40
+
+If a circle has a radius of 7 cm, what is its diameter?
+A) 10 cmB) 14 cmC) 21 cmD) 49 cm
+Answer: B) 14 cm
+
+What is the value of x in the equation 3x + 5 = 20?
+A) 3 B) 4 C) 5 D) 6 
+Answer: C) 5
+
+Which of the following is a prime number?
+A) 1B) 9C) 15D) 17
+Answer: D) 17
+
+How many faces does a standard cube have?
+A) 4B) 6C) 8D) 12
+Answer: B) 6
+
+What is 25% of 200?
+A) 25B) 40C) 50D) 75
+Answer: C) 50
+
+What is the next number in the sequence: \(2, 4, 8, 16, 32, \dots\)?
+A) 48B) 54C) 60D) 64
+Answer: D) 64
+ 
+What is the square root of 144?
+A) 10B) 12C) 14D) 16
+Answer: B) 12
+
+According to the order of operations (PEMDAS/BODMAS), what is evaluated first?
+A) Exponents/OrdersB) MultiplicationC) Brackets/ParenthesesD) Addition
+Answer: C) Brackets/Parentheses
