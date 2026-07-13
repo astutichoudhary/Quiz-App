@@ -21,8 +21,10 @@ welcome.pack(anchor='center')
 
 questiondict = {}
 
-math = {"What is the sum of the angles inside a triangle?" : ['A) 90°','B) 180°','C) 270°','D) 360°'],
-"answer": "B) 180°"}
+mathdict = {'question' : "What is the sum of the angles inside a triangle?",
+            'options' : ['A) 90°','B) 180°','C) 270°','D) 360°']}
+# "answer": "B) 180°"
+
 
 x = IntVar()
 y = IntVar()
@@ -55,15 +57,13 @@ all = Checkbutton(home, text = "All", font = ('Georgia',15),
 
 all.place(x=100,y=220)
 
-# def proceed():
-#     questions()
+def proceed():
+    home.destroy()
 
-startquiz = Button(home, text = "Start quiz.",font = ('Georgia',20),)
+startquiz = Button(home, text = "Start quiz.",font = ('Georgia',20),command = proceed)
 startquiz.pack()
 
 home.mainloop()
-
-
 
 questions = Tk()
 
@@ -71,12 +71,23 @@ questions.geometry('720x480')
 questions.config(background="#E99FBF")
 questions.title('Quiz started!')
 
-
-for key,value in questiondict.items():
-    questionlabel = Label(questions,text = key,
+for key,value in mathdict.items():
+    questionlabel = Label(questions,text = value,
                           font= ('Georgia',15),
                           bg="#E874A6",
                           )
+    questionlabel.pack()
+
+ansidx = IntVar()
+
+for val in mathdict['options']:
+    i = 1
+    answerbutton = Radiobutton(questions, text = 'xyz', font = ('Georgia',20),
+                               value= ansidx)
+    i += 1
+    answerbutton.pack()
+
+
 
 
 questions.mainloop()
