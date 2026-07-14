@@ -24,6 +24,9 @@ questiondict = {}
 mathdict = {'question' : "What is the sum of the angles inside a triangle?",
             'options' : ['A) 90°','B) 180°','C) 270°','D) 360°']}
 # "answer": "B) 180°"
+sciencedict = {}
+gkdict = {}
+# alldict = gkdict + sciencedict + mathdict
 
 ques = mathdict['question']
 optA = mathdict['options'][0]
@@ -32,24 +35,34 @@ optC = mathdict['options'][2]
 optD = mathdict['options'][3]
 
 
-x = IntVar()
-y = IntVar()
-z = IntVar()
-a = IntVar()
+x = IntVar(value= 0)
+y = IntVar(value= 0)
+z = IntVar(value= 0)
+a = IntVar(value= 0)
+
+def callall():
+    if x == 1 & y == 1 & z == 1:
+        math.toggle()
+        science.toggle()
+        gk.toggle()
+        all.toggle()
 
 science = Checkbutton(home, text = 'Science',font = ('Georgia',15),
                       bg="#E99FBF",activebackground="#E99FBF",
-                      variable = x,onvalue=1,offvalue=0)
+                      variable = x,onvalue=1,offvalue=0,
+                      command= callall)
 science.place(x=100,y=130)
 
 math = Checkbutton(home, text= 'Maths', font = ('Georgia',15),
                    bg="#E99FBF",activebackground="#E99FBF",
-                   variable = y,onvalue=1,offvalue=0)
+                   variable = y,onvalue=1,offvalue=0,
+                   command= callall)
 math.place(x=100,y=160)
 
 gk = Checkbutton(home, text= 'General Knowledge', font = ('Georgia',15),
                    bg="#E99FBF",activebackground="#E99FBF",
-                   variable = z,onvalue=1,offvalue=0)
+                   variable = z,onvalue=1,offvalue=0,
+                   command= callall)
 gk.place(x=100,y=190)
 
 def toggle():
