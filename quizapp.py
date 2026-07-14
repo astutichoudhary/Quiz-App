@@ -25,6 +25,12 @@ mathdict = {'question' : "What is the sum of the angles inside a triangle?",
             'options' : ['A) 90°','B) 180°','C) 270°','D) 360°']}
 # "answer": "B) 180°"
 
+ques = mathdict['question']
+optA = mathdict['options'][0]
+optB = mathdict['options'][1]
+optC = mathdict['options'][2]
+optD = mathdict['options'][3]
+
 
 x = IntVar()
 y = IntVar()
@@ -71,23 +77,24 @@ questions.geometry('720x480')
 questions.config(background="#E99FBF")
 questions.title('Quiz started!')
 
-for key,value in mathdict.items():
-    questionlabel = Label(questions,text = value,
+x = IntVar()
+
+# for key, value in mathdict.items():
+questionlabel = Label(questions,text = ques,
                           font= ('Georgia',15),
                           bg="#E874A6",
                           )
-    questionlabel.pack()
+questionlabel.pack()
+optionslabel = Label(questions,text = mathdict['options'],
+                          font= ('Georgia',15),
+                          bg="#E874A6", )
+optionslabel.pack()
 
-ansidx = IntVar()
+for index in range(len(mathdict['options'])):
+    ans = Radiobutton(questions,text = f'Option {index + 1}',
+                      variable = x , font = ('Georgia',15), value = index + 1,
 
-for val in mathdict['options']:
-    i = 1
-    answerbutton = Radiobutton(questions, text = 'xyz', font = ('Georgia',20),
-                               value= ansidx)
-    i += 1
-    answerbutton.pack()
-
-
-
+    )
+    ans.pack()
 
 questions.mainloop()
