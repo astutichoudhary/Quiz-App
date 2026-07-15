@@ -1,0 +1,15 @@
+{ "questions" : [
+    {
+        "What is the sum of the angles inside a triangle?": "B) 180°",
+        "options":"['A) 90°','B) 180°','C) 270°','D) 360°']"
+    },
+    {
+        "What is 15 * 4 - 10?":"A) 40",
+        "options":"['A) 40','B) 50','C) 60','D) 70']"
+    },
+    {
+        "If a circle has a radius of 7 cm, what is its diameter?":"B) 14 cm",
+        "options":"['A) 10 cm','B) 14 cm','C) 21 cm','D) 49 cm']"
+    }
+]
+}
